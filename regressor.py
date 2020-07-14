@@ -37,6 +37,7 @@ class PLSRegression(AutoSklearnRegressionAlgorithm):
                 'handles_classification': False,
                 'handles_multiclass': False,
                 'handles_multilabel': False, 
+                'handles_multioutput': True,
                 'is_deterministic': True,
                 'input': (DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (PREDICTIONS,)}
@@ -100,6 +101,7 @@ class MLPRegressor(AutoSklearnRegressionAlgorithm):
                 'handles_classification': False,
                 'handles_multiclass': False,
                 'handles_multilabel': False, 
+                'handles_multioutput': True,
                 'is_deterministic': False,
                 'input': (SPARSE, DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (PREDICTIONS,)}
@@ -163,6 +165,7 @@ class OrthogonalMatchingPursuit(AutoSklearnRegressionAlgorithm):
                 'handles_classification': False,
                 'handles_multiclass': False,
                 'handles_multilabel': False, 
+                'handles_multioutput': True,
                 'is_deterministic': True,
                 'input': (DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (PREDICTIONS,)}
@@ -224,7 +227,8 @@ class ElasticNet(AutoSklearnRegressionAlgorithm):
                 'handles_regression': True,
                 'handles_classification': False,
                 'handles_multiclass': False,
-                'handles_multilabel': False, 
+                'handles_multilabel': False,
+                'handles_multioutput': True,
                 'is_deterministic': False,
                 'input': (SPARSE, DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (PREDICTIONS,)}
@@ -278,6 +282,7 @@ class LinearRegression(AutoSklearnRegressionAlgorithm):
                 'handles_classification': False,
                 'handles_multiclass': False,
                 'handles_multilabel': False, 
+                'handles_multioutput': True,
                 'is_deterministic': True,
                 'input': (SPARSE, DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (PREDICTIONS,)}
@@ -327,6 +332,7 @@ class KernelRidgeRegression(AutoSklearnRegressionAlgorithm):
                 'handles_classification': False,
                 'handles_multiclass': False,
                 'handles_multilabel': False, 
+                'handles_multioutput': True,
                 'is_deterministic': True,
                 'input': (SPARSE, DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (PREDICTIONS,)}

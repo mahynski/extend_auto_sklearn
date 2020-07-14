@@ -20,7 +20,7 @@ class MLPClassifier(AutoSklearnClassificationAlgorithm):
         self.random_state = random_state
         self.estimator = None
 
-    def fit(self, X, y):
+    def fit(self, X, y):        
         self.num_nodes_per_layer = int(self.num_nodes_per_layer)
         self.hidden_layer_depth = int(self.hidden_layer_depth)
         self.alpha = float(self.alpha)
@@ -36,6 +36,7 @@ class MLPClassifier(AutoSklearnClassificationAlgorithm):
                                        shuffle=True
                                        )
         self.estimator.fit(X, y)
+        
         return self
 
     def predict(self, X):
@@ -56,6 +57,7 @@ class MLPClassifier(AutoSklearnClassificationAlgorithm):
                 'handles_classification': True,
                 'handles_multiclass': True,
                 'handles_multilabel': True,
+                'handles_multioutput': True,
                 'is_deterministic': False,
                 # Both input and output must be tuple(iterable)
                 'input': (SPARSE, DENSE, SIGNED_DATA, UNSIGNED_DATA),

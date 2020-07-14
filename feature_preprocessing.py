@@ -121,6 +121,7 @@ class RFE(AutoSklearnPreprocessingAlgorithm):
                 'handles_classification': True,
                 'handles_multiclass': True,
                 'handles_multilabel': False,
+                'handles_multioutput': False,
                 'is_deterministic': False, # if RNG seed specified, could be true?
                 'input': (DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (DENSE, UNSIGNED_DATA, SIGNED_DATA)}
@@ -256,6 +257,7 @@ class SparsePCA(AutoSklearnPreprocessingAlgorithm):
                 'handles_classification': True,
                 'handles_multiclass': True,
                 'handles_multilabel': True,
+                'handles_multioutput': True,
                 'is_deterministic': False, # if RNG seed specified, could be true?
                 'input': (DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (DENSE, UNSIGNED_DATA, SIGNED_DATA)}
@@ -320,6 +322,7 @@ class LDA(AutoSklearnPreprocessingAlgorithm):
                 'handles_classification': True,
                 'handles_multiclass': True, # Was False in tutorial, I changed to True
                 'handles_multilabel': False,
+                'handles_multioutput': True,
                 'is_deterministic': True,
                 'input': (DENSE, UNSIGNED_DATA, SIGNED_DATA),
                 'output': (DENSE, UNSIGNED_DATA, SIGNED_DATA)}
