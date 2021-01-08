@@ -7,6 +7,7 @@ Automatically extend the [auto-sklearn](https://automl.github.io/auto-sklearn/ma
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## Installation
+
 1. Create new conda environment to work in.
 ~~~ bash
 $ sudo apt-get install build-essential swig # ONLY IF RUNNING UBUNTU
